@@ -38,50 +38,67 @@
 
 ## Status and Details
 - Project Status: [Completed]
-- Date Coded: 01/11/22
+- Date Coded: 01/11/21
 - Link to raw Data: Offline Data Used. Some pickle files of transformed data are given. To aquire raw data, get N participants to hum or whistle to the tune of different songs N times.
 - Notes: This is one of, if not, the first ML project I have under taken. Some errors or inefficiencies in code or text may exist. 
 
 
 ## Technology
 - Language: Python 3.6.9
-- Libraries: Pandas, Numpy, Sklearn
-
-
-- Set up File: If complicated project with need to install many packages
+- Libraries: Pandas, Numpy, Sklearn, matplotlib, seaborn, Librosa, soundfile, math, xgboost, os, sys, re, pickle, glob, IPython, urllib, zipfile
+- Sep up File: N/A
 
 
 ## Introduction
-The purpose of this project is ________. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
+The purpose of this project is to allow a user the ability to find a song name by humming or whistling the tune. Apps such as Shazam allow for a user to identify a song when already listening to it. However if you are currently no longer listening, this algorithm can give you a chance of identifying the song name.
 
 
 ### Project Description
-Provide more detailed overview of the project. Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modeling work are you using to solve the problem? What blockers and challenges are you facing? Feel free to number or bullet point things here
+The dataset used for this project was made by students at the Queen Mary University of London. Each student provided 28 .wav files of hums or whistles to a list of different songs. Around 200 students took part, resulting in a dataset that was varied and highly representative of the enviroment of deployment. The raw data was close to perfect for model training. Some data was kept private by the University. The dataset available in this project was a total of 747 .wav files.
+
+Feature extraction takes place to uncover data structure in the .wav files. This results in features that are able to be analysed and used for model training. Classification models were trained and validated using the processed dataset. A model of accuracy 89% was determined however the validation accuracy suggests under fitting.
+
+
+### Basic Solution:
+The basic solution contains well known ways of feature engineering audio files. This uncovers structure (features) in the raw audio data. The features are then used to train classification models. 
+
+### Advanced Solution:
+The advanced solution required a creative problem solving. The aim was to advance the algorithm further. My advanced solution involves measuring the amount of 'silence' in each file. Although no new structures were determined from the raw data, my solution had the benefit of being able to be applied to various other data science processes/projects that dealt with background noise.
 
 
 ### Objectives
-What will this analysis/algorithm do/accomplish, keep it short
+- Perform feature extraction of raw .wav file data
+- Train and validate machine learning models
+- Identify song name from user input humming or whistling to song tune
+- Provide model metrics and analyse results
 
 
 ## Data Science Methodology
 
 ### Problem Formulation
-Layman terms, short and to the point, relevant, specific, unambiguous and align with business strategy
+Often times a song can get stuck in your head, or you really enjoy listening to a song on the radio but you cant use Shazam as your driving. This algorithm provides a means to identify a song based on you, the user, inputting the data yourself via humming or whistling to the tune.
 
 
 ### Data Engineering Methods
-Uncovering structure from raw data EG transformation, Inferential Statistics, Machine Learning, Data Visualization, Predictive Modeling, etc.
+- Data Transformation
+- Data Preprocessing
+- Inferential Statistics
+- Data Visualisation
+- Machine Learning
+- Predictive Modelling
+- Model metric analysis
 
 
 ### Modeling 
-the process of creating a visual representation of either a whole information system or parts of it to communicate connections between data points and structures.
+The preprocessed data underwent dimensionality reduction through the use of principle component analysis. The dataset split into test and validation sets. The model was trained and validated using a variety of classifiers. The XGB classifier was deemed the most well suited for the needs of this analysis. The model had the highest training and validation accuracy with relatively low signs of under fitting.
 
 
 ### Deployment
-Application of model for predictions using transformed data
+The objective of this project was to train and validate a model. Deployment was not required.
 
 
 ## Conclusions
+A training accuracy of 89% and validation accuracy of 61% was observed. The XGB classifier was used and showed great confusion for the validation dataset. The features extracted were likely not useful enough for the model to differentiate between songs. Therefore, deployment of this model is not advised until further feature extraction takes place.
 
 
 ## Contributing Members and Contacts
@@ -89,29 +106,11 @@ Application of model for predictions using transformed data
 
 |Name     |  GitHub Handles   |  
 |---------|-----------------|
-| xxx | [Full Name](https://github.com/[github handle])   |
-| xxx | [Full Name](https://github.com/[github handle])   |
+| Daniel Elston | [Git DE](https://github.com/Daniel-Elston)   |
 
 Please feel free to contact me if you have any questions, require any further information or wish to contribute.
 Email 1: delstonds@outlook.com
 Email 2: ec21024@qmul.ac.uk
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Hums and Whistle Song Recognition Algorithm
-Users hum/whistle to the tune of a song, the algorithm attempts to identify the song name. A dataset of 747 .wav files were made available for the use of training and validating models. Although the raw data is too large to be uploaded to GitHub, the python pickle module was used to save the results of the data transformations. I have uploaded some of the pickle files (some pickle files still too large to upload) incase other want to analyse further. <br/>
-<br/>
-This repository includes a basic and advanced soltuion. I am currently too busy, but in the future I will upload the full datasets used and improve the solutions overall.
 
 ## Basic Solution:
 The basic solution contains well known ways of feature engineering audio files. This uncovers structure (features) in the raw audio data. The features are then used to train classification models. 
