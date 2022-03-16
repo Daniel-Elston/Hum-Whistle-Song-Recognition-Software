@@ -26,6 +26,8 @@
 - [Technology](#technology)
 - [Introduction](#introduction)
     - [Project Description](#project-description)
+    - [Basic Solution](#basic-solution)
+    - [Advanced Solution](#advanced-solution)
     - [Objectives](#objectives)
 - [Data Science Methodology](#data-science-methodology)
     - [Problem Formulation](#problem-formulation)
