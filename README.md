@@ -49,6 +49,7 @@
 - Language: Python 3.6.9
 - Libraries: Pandas, Numpy, Sklearn, matplotlib, seaborn, Librosa, soundfile, math, xgboost, os, sys, re, pickle, glob, IPython, urllib, zipfile
 - Sep up File: N/A
+- Pickle: Pickle files containing saved results of feature extraction have been provided
 
 
 ## Introduction
