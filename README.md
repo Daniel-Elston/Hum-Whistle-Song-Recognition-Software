@@ -15,7 +15,7 @@
 
 </p>
 
-# Hums and Whistle Song Recognition Software
+<h1 align='center'> Hums and Whistle Song Recognition Software </h1>
   
 <hr>
 
