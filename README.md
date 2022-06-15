@@ -104,6 +104,12 @@ The objective of this project was to train and validate a model. Deployment was 
 A training accuracy of 89% and validation accuracy of 61% was observed. The XGB classifier was used and showed great confusion for the validation dataset. The features extracted were likely not useful enough for the model to differentiate between songs. Therefore, deployment of this model is not advised until further feature extraction takes place.
 
 
+## Basic Solution:
+The basic solution contains well known ways of feature engineering audio files. This uncovers structure (features) in the raw audio data. The features are then used to train classification models. 
+
+## Advanced Solution:
+The advanced solution required a creative problem solving. The aim was to advance the algorithm further. My advanced solution involves measuring the amount of 'silence' in each file. Although no new structures were determined from the raw data, my solution had the benefit of being able to be applied to various other data science processes/projects that dealt with background noise.
+
 ## Contributing Members and Contacts
 **Team Lead: [Daniel Elston](https://github.com/Daniel-Elston)**
 
@@ -111,14 +117,6 @@ A training accuracy of 89% and validation accuracy of 61% was observed. The XGB 
 |---------|-----------------|
 | Daniel Elston | [Git DE](https://github.com/Daniel-Elston)   |
 
-Please feel free to contact me if you have any questions, require any further information or wish to contribute.
-Email 1: delstonds@outlook.com
+Please feel free to contact me if you have any questions, require any further information or wish to contribute.<br/>
+Email 1: delstonds@outlook.com<br/>
 Email 2: ec21024@qmul.ac.uk
-
-## Basic Solution:
-The basic solution contains well known ways of feature engineering audio files. This uncovers structure (features) in the raw audio data. The features are then used to train classification models. 
-
-## Advanced Solution:
-The advanced solution required a creative problem solving. The aim was to advance the algorithm further. My advanced solution involves measuring the amount of 'silence' in each file. Although no new structures were determined from the raw data, my solution had the benefit of being able to be applied to various other data science processes/projects that dealt with background noise.
-
-
